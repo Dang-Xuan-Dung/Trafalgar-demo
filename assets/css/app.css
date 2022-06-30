@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;600;700&display=swap');
+
+:root {
+    --gray: #7D7987;
+    --black: #000;
+    --white: #fff;
+    --primary-color: #458FF6;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Mulish', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    color: var(--gray);
+}
+
+.wrapper {
+    max-width: 1600px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.container {
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.container-fluid {
+    max-width: 1260px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 20px;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.button {
+    display: inline-block;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 20px 50px;
+    border-radius: 100rem;
+    background-color: transparent;
+    outline: none;
+    border: 0;
+    cursor: pointer;
+
+}
+
+.button-primary {
+    background-color: var(--primary-color);
+    color: var(--white);
+    transition: all 0.25s ease-in;
+}
+
+.button-primary:hover {
+    opacity: 0.7;
+}
+
+.button-secondary {
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    transition: all 0.25s ease-in;
+}
+
+.button-secondary:hover {
+    background-color: var(--primary-color);
+    color: var(--white)
+}
+
+.global-heading {
+    color: var(--black);
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 156%;
+    padding-bottom: 26px;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.global-heading:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 56px;
+    height: 2px;
+    background-color: var(--black);
+}
+
+.global-heading-center:before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 56px;
+    height: 2px;
+    text-align: center;
+    background-color: var(--black);
+}
+
+.global-text {
+    font-size: 18px;
+    line-height: 167%;
+}
+
+.center-inline {
+    display: inline-block;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+
+@media screen and (max-width: 1023px) {
+    .wrapper {
+        left: 51%;
+    }
+
+    .global-heading {
+        font-size: 30px;
+    }
+
+    .global-text {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .button {
+        padding: 10px 30px;
+    }
+}
